@@ -1,0 +1,15 @@
+/home/rklymenko/Projects/forum-backend/forum-backend/bin/Debug/netcoreapp2.1/forum-backend.deps.json
+/home/rklymenko/Projects/forum-backend/forum-backend/bin/Debug/netcoreapp2.1/forum-backend.runtimeconfig.json
+/home/rklymenko/Projects/forum-backend/forum-backend/bin/Debug/netcoreapp2.1/forum-backend.runtimeconfig.dev.json
+/home/rklymenko/Projects/forum-backend/forum-backend/bin/Debug/netcoreapp2.1/forum-backend.dll
+/home/rklymenko/Projects/forum-backend/forum-backend/bin/Debug/netcoreapp2.1/forum-backend.pdb
+/home/rklymenko/Projects/forum-backend/forum-backend/obj/Debug/netcoreapp2.1/forum-backend.csprojAssemblyReference.cache
+/home/rklymenko/Projects/forum-backend/forum-backend/obj/Debug/netcoreapp2.1/forum-backend.csproj.CoreCompileInputs.cache
+/home/rklymenko/Projects/forum-backend/forum-backend/obj/Debug/netcoreapp2.1/forum-backend.RazorAssemblyInfo.cache
+/home/rklymenko/Projects/forum-backend/forum-backend/obj/Debug/netcoreapp2.1/forum-backend.RazorAssemblyInfo.cs
+/home/rklymenko/Projects/forum-backend/forum-backend/obj/Debug/netcoreapp2.1/forum-backend.AssemblyInfoInputs.cache
+/home/rklymenko/Projects/forum-backend/forum-backend/obj/Debug/netcoreapp2.1/forum-backend.AssemblyInfo.cs
+/home/rklymenko/Projects/forum-backend/forum-backend/obj/Debug/netcoreapp2.1/forum-backend.RazorTargetAssemblyInfo.cache
+/home/rklymenko/Projects/forum-backend/forum-backend/obj/Debug/netcoreapp2.1/forum-backend.dll
+/home/rklymenko/Projects/forum-backend/forum-backend/obj/Debug/netcoreapp2.1/forum-backend.pdb
+/home/rklymenko/Projects/forum-backend/forum-backend/bin/Debug/netcoreapp2.1/forum-backend.dll.config

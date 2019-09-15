@@ -1,0 +1,22 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "forum-backend", "forum-backend\forum-backend.csproj", "{97FEC220-A64A-475B-A645-898CB6BA56E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{89090BB7-8DB9-4EB8-B482-BE9A92E0313A}"
+	ProjectSection(SolutionItems) = preProject
+		ddl.sql = ddl.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97FEC220-A64A-475B-A645-898CB6BA56E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97FEC220-A64A-475B-A645-898CB6BA56E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97FEC220-A64A-475B-A645-898CB6BA56E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97FEC220-A64A-475B-A645-898CB6BA56E0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
