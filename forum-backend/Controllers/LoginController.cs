@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Net;
+using System.Net.Http;
 using forumbackend.Models;
 using forumbackend.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -9,15 +11,18 @@ namespace forumbackend.Controllers
     [ApiController]
     public class LoginController : ControllerBase
     {
-
         private LoginService loginService = new LoginService();
 
         [HttpPost]
-        public void Login([FromBody] LoginModel loginModel)
+        public bool Login([FromBody] UserModel loginModel)
         {
-            loginService.Login(loginModel);
-            Console.WriteLine(loginModel.username);
-            Console.WriteLine(loginModel.password);
+            var token = loginService.Login(loginModel);
+            if(token == null)
+            {
+                return false;
+            }
+            Response.Headers.Add("Authentication", token);
+            return true;
         }
     }
 }

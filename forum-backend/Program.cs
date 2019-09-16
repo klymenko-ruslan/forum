@@ -16,8 +16,8 @@ namespace forum_backend
     {
         public static void Main(string[] args)
         {
-            DbProviderFactories.RegisterFactory("System.Data.SqlClient", SqlClientFactory.Instance);
-            Type providerService = typeof(System.Data.Entity.SqlServer.SqlProviderServices);
+           // DbProviderFactories.RegisterFactory("System.Data.SqlClient", SqlClientFactory.Instance);
+           // Type providerService = typeof(System.Data.Entity.SqlServer.SqlProviderServices);
             CreateWebHostBuilder(args).Build().Run();
         }
 
