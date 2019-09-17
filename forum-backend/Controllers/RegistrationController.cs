@@ -1,6 +1,7 @@
 ﻿using System;
 using forumbackend.Models;
 using forumbackend.Services;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace forumbackend.Controllers
@@ -12,9 +13,9 @@ namespace forumbackend.Controllers
         private RegistrationService registrationService = new RegistrationService();
 
         [HttpPost]
-        public void Register(UserModel userModel)
+        public bool Register(UserModel userModel)
         {
-            registrationService.Register(userModel);
+            return registrationService.Register(userModel);
         }
     }
 }

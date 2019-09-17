@@ -14,15 +14,11 @@ namespace forumbackend.Controllers
         private LoginService loginService = new LoginService();
 
         [HttpPost]
-        public bool Login([FromBody] UserModel loginModel)
+        public TokenHandler Login([FromBody] UserModel loginModel)
         {
-            var token = loginService.Login(loginModel);
-            if(token == null)
-            {
-                return false;
-            }
-            Response.Headers.Add("Authentication", token);
-            return true;
+            TokenHandler tokenHandler = new TokenHandler();
+            tokenHandler.token = loginService.Login(loginModel);
+            return tokenHandler;
         }
     }
 }

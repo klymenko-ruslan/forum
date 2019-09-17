@@ -24,7 +24,6 @@ namespace forumbackend.Controllers
         [HttpGet]
         public List<TopicModel> GetTopics()
         {
-            Console.WriteLine(topicService.GetTopics()[0].author.id +  "!!!!!");
             return topicService.GetTopics();
         }
     }

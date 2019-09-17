@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using forumbackend.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,6 +13,13 @@ namespace forumbackend.Controllers
         public Boolean AddPost(PostModel postModel)
         {
             return true;
+        }
+
+        [HttpGet]
+        public List<PostModel> GetPosts(int topicId)
+        {
+            Console.WriteLine("!!!!!" + topicId);
+            return null;
         }
     }
 }
