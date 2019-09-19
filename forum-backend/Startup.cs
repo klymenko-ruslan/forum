@@ -45,7 +45,6 @@ namespace forum_backend
             {
                 app.UseHsts();
             }
-
             app.UseCors("corsPolicy");
             app.UseHttpsRedirection();
             app.UseMvc();

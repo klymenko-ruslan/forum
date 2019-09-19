@@ -9,14 +9,18 @@ namespace forumbackend.Services
 {
     public class TopicService
     {
-        public bool PostTopic(TopicModel topicModel)
+        public bool PostTopic(TopicDto topicDto)
         {
             using (var context = new ChatContext())
             {
+                Console.WriteLine("!!" + topicDto.name);
+                TopicModel topicModel = new TopicModel();
+                topicModel.name = topicDto.name;
+                topicModel.author = context.UserModel.First(user => user.id == topicDto.authorid);
                 context.TopicModel.Add(topicModel);
                 context.SaveChanges();
+                return true;
             }
-            return true;
         }
 
         public List<TopicModel> GetTopics()

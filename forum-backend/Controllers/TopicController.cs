@@ -15,10 +15,9 @@ namespace forumbackend.Controllers
         private TopicService topicService = new TopicService();
 
         [HttpPost]
-        public String PostTopic(TopicModel topicModel)
+        public bool PostTopic([FromBody] TopicDto topicDto)
         {
-            topicService.PostTopic(topicModel);
-            return "";
+            return topicService.PostTopic(topicDto);
         }
 
         [HttpGet]

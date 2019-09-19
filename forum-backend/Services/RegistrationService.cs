@@ -12,6 +12,10 @@ namespace forumbackend.Services
 
         public bool Register(UserModel loginModel)
         {
+            if(loginModel.username.Length == 0 || loginModel.password.Length == 0)
+            {
+                return false;
+            }
             try {
                 using (var context = new ChatContext())
                 {

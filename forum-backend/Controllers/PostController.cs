@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using forumbackend.Models;
+using forumbackend.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace forumbackend.Controllers
@@ -9,17 +10,19 @@ namespace forumbackend.Controllers
     [Route("post")]
     public class PostController: ControllerBase
     {
+        PostService postService = new PostService();
+
         [HttpPost]
-        public Boolean AddPost(PostModel postModel)
+        public Boolean AddPost([FromBody]PostDto postModel)
         {
-            return true;
+            return postService.AddPost(postModel);
         }
 
         [HttpGet]
+        [Route("{topicId}")]
         public List<PostModel> GetPosts(int topicId)
         {
-            Console.WriteLine("!!!!!" + topicId);
-            return null;
+            return postService.GetPosts(topicId);
         }
     }
 }

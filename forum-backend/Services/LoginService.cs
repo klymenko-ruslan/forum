@@ -31,7 +31,7 @@ namespace forumbackend.Services
             return tokenHandler.WriteToken(token);
         }
 
-        public string Login(UserModel userModel)
+        public TokenHandler Login(UserModel userModel)
         {
             using (var context = new ChatContext())
             {
@@ -39,7 +39,10 @@ namespace forumbackend.Services
                 UserModel user = context.UserModel.SingleOrDefault(currentUser => currentUser.username.Equals(userModel.username));
                 if (user != null && encryptedPassword.Equals(user.password))
                 {
-                    return generateToken(user.id.ToString());
+                    TokenHandler tokenHandler = new TokenHandler();
+                    tokenHandler.token = generateToken(user.id.ToString());
+                    tokenHandler.userId = user.id;
+                    return tokenHandler;
                 }
                 return null;
             }

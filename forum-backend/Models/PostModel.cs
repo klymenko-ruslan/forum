@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace forumbackend.Models
 {
-    [Table("entities")]
+    [Table("posts")]
     public class PostModel
     {
         [Key]
@@ -13,5 +13,6 @@ namespace forumbackend.Models
         public long timestamp { get; set; }
         public TopicModel topic { get; set; }
         public UserModel author { get; set; }
+        public PostModel replyto { get; set; }
     }
 }

@@ -16,9 +16,7 @@ namespace forumbackend.Controllers
         [HttpPost]
         public TokenHandler Login([FromBody] UserModel loginModel)
         {
-            TokenHandler tokenHandler = new TokenHandler();
-            tokenHandler.token = loginService.Login(loginModel);
-            return tokenHandler;
+            return loginService.Login(loginModel);
         }
     }
 }
