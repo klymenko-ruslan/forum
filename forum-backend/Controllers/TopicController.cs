@@ -25,5 +25,12 @@ namespace forumbackend.Controllers
         {
             return topicService.GetTopics();
         }
+
+        [HttpDelete]
+        [Route("{topicId}")]
+        public bool DeleteTopic(int topicId)
+        {
+            return topicService.RemoveTopic(topicId);
+        }
     }
 }

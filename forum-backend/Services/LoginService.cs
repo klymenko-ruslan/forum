@@ -6,6 +6,7 @@ using System.Text;
 using forumbackend.Config;
 using forumbackend.Models;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.EntityFrameworkCore;
 
 namespace forumbackend.Services
 {
@@ -36,11 +37,14 @@ namespace forumbackend.Services
             using (var context = new ChatContext())
             {
                 string encryptedPassword = encryptionService.MD5Hash(userModel.password);
-                UserModel user = context.UserModel.SingleOrDefault(currentUser => currentUser.username.Equals(userModel.username));
+                UserModel user = 
+                context.UserModel
+                    .Include(currentUser => currentUser.role).SingleOrDefault(currentUser => currentUser.username.Equals(userModel.username));
                 if (user != null && encryptedPassword.Equals(user.password))
                 {
                     TokenHandler tokenHandler = new TokenHandler();
                     tokenHandler.token = generateToken(user.id.ToString());
+                    tokenHandler.role = user.role.name;
                     tokenHandler.userId = user.id;
                     return tokenHandler;
                 }
