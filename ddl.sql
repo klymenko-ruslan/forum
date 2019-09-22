@@ -16,3 +16,4 @@ CONSTRAINT reply_fk FOREIGN KEY (replytoid) REFERENCES posts (id));
 insert into roles(name) values('admin');
 insert into roles(name) values('user');
 
+insert into users(username, password, roleid) values('admin','21232f297a57a5a743894a0e4a801fc3', (select id from role where name = 'admin'));

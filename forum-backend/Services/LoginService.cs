@@ -46,6 +46,7 @@ namespace forumbackend.Services
                     tokenHandler.token = generateToken(user.id.ToString());
                     tokenHandler.role = user.role.name;
                     tokenHandler.userId = user.id;
+                    tokenHandler.username = user.username;
                     return tokenHandler;
                 }
                 return null;

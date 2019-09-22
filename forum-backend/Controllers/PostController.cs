@@ -24,5 +24,12 @@ namespace forumbackend.Controllers
         {
             return postService.GetPosts(topicId);
         }
+
+        [HttpDelete]
+        [Route("{postId}")]
+        public Boolean DeletePost(int postId)
+        {
+            return postService.RemovePost(postId);
+        }
     }
 }
