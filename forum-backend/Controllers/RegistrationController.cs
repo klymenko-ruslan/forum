@@ -10,7 +10,12 @@ namespace forumbackend.Controllers
     [ApiController]
     public class RegistrationController : ControllerBase
     {
-        private RegistrationService registrationService = new RegistrationService();
+        private RegistrationService registrationService;
+
+        public RegistrationController(RegistrationService registrationService)
+        {
+            this.registrationService = registrationService;
+        }
 
         [HttpPost]
         public bool Register(UserModel userModel)

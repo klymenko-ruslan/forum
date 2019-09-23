@@ -10,7 +10,12 @@ namespace forumbackend.Controllers
     [Route("post")]
     public class PostController: ControllerBase
     {
-        PostService postService = new PostService();
+        PostService postService;
+
+        public PostController(PostService postService)
+        {
+            this.postService = postService;
+        }
 
         [HttpPost]
         public Boolean AddPost([FromBody]PostDto postModel)

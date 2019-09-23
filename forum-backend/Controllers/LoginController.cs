@@ -11,7 +11,12 @@ namespace forumbackend.Controllers
     [ApiController]
     public class LoginController : ControllerBase
     {
-        private LoginService loginService = new LoginService();
+        private LoginService loginService;
+
+        public LoginController(LoginService loginService)
+        {
+            this.loginService = loginService;
+        }
 
         [HttpPost]
         public TokenHandler Login([FromBody] UserModel loginModel)

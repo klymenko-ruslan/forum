@@ -12,7 +12,12 @@ namespace forumbackend.Controllers
     [ApiController]
     public class TopicController
     {
-        private TopicService topicService = new TopicService();
+        private TopicService topicService;
+
+        public TopicController(TopicService topicService)
+        {
+            this.topicService = topicService;
+        }
 
         [HttpPost]
         public bool PostTopic([FromBody] TopicDto topicDto)

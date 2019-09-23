@@ -8,7 +8,12 @@ namespace forumbackend.Services
     public class RegistrationService
     {
 
-        private EncryptionService encryptionService = new EncryptionService();
+        private EncryptionService encryptionService;
+
+        public RegistrationService(EncryptionService encryptionService)
+        {
+            this.encryptionService = encryptionService;
+        }
 
         public bool Register(UserModel loginModel)
         {
