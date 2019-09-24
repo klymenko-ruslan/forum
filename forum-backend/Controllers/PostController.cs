@@ -23,6 +23,12 @@ namespace forumbackend.Controllers
             return postService.AddPost(postModel);
         }
 
+        [HttpPut]
+        public Boolean UpdatePost([FromBody]PostDto postModel)
+        {
+            return postService.UpdatePost(postModel);
+        }
+
         [HttpGet]
         [Route("{topicId}")]
         public List<PostModel> GetPosts(int topicId)
