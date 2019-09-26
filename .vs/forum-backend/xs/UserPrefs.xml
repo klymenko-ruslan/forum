@@ -1,0 +1,37 @@
+﻿<Properties StartupConfiguration="{97FEC220-A64A-475B-A645-898CB6BA56E0}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="forum-backend/Services/PostService.cs">
+    <Files>
+      <File FileName="forum-backend/Services/AuthorizationFilter.cs" Line="23" Column="61" />
+      <File FileName="forum-backend/Services/UserService.cs" Line="25" Column="43" />
+      <File FileName="forum-backend/Models/Role.cs" Line="6" Column="9" />
+      <File FileName="forum-backend/Controllers/PostController.cs" Line="29" Column="33" />
+      <File FileName="forum-backend/Models/PostDto.cs" Line="4" Column="25" />
+      <File FileName="forum-backend/Services/PostService.cs" Line="36" Column="27" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="forum-backend" expanded="True">
+            <Node name="Solution Items" expanded="True" />
+            <Node name="forum-backend" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Services" expanded="True">
+                <Node name="PostService.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/home/rklymenko/Projects/forum-backend/forum-backend/Controllers/ValuesController.cs" relfile="forum-backend/Controllers/ValuesController.cs" line="40" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.forum-backend PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>
