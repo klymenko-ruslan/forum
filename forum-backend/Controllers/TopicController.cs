@@ -12,20 +12,30 @@ namespace forumbackend.Controllers
     [ApiController]
     public class TopicController
     {
-        private TopicService topicService = new TopicService();
+        private TopicService topicService;
+
+        public TopicController(TopicService topicService)
+        {
+            this.topicService = topicService;
+        }
 
         [HttpPost]
-        public String PostTopic(TopicModel topicModel)
+        public bool PostTopic([FromBody] TopicDto topicDto)
         {
-            topicService.PostTopic(topicModel);
-            return "";
+            return topicService.PostTopic(topicDto);
         }
 
         [HttpGet]
         public List<TopicModel> GetTopics()
         {
-            Console.WriteLine(topicService.GetTopics()[0].author.id +  "!!!!!");
             return topicService.GetTopics();
+        }
+
+        [HttpDelete]
+        [Route("{topicId}")]
+        public bool DeleteTopic(int topicId)
+        {
+            return topicService.RemoveTopic(topicId);
         }
     }
 }

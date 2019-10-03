@@ -8,19 +8,33 @@ namespace forumbackend.Services
     public class RegistrationService
     {
 
-        private EncryptionService encryptionService = new EncryptionService();
+        private EncryptionService encryptionService;
+
+        public RegistrationService(EncryptionService encryptionService)
+        {
+            this.encryptionService = encryptionService;
+        }
 
         public bool Register(UserModel loginModel)
         {
-            using (var context = new ChatContext())
+            if(loginModel.username.Length == 0 || loginModel.password.Length == 0)
             {
-                RoleModel role = context.RoleModel.SingleOrDefault(currentRole => currentRole.name == Role.user.ToString());
-                loginModel.role = role;
-                loginModel.password = encryptionService.MD5Hash(loginModel.password);
-                context.UserModel.Add(loginModel);
-                context.SaveChanges();
+                return false;
             }
-            return true;
+            try {
+                using (var context = new ChatContext())
+                {
+                    RoleModel role = context.RoleModel.SingleOrDefault(currentRole => currentRole.name == Role.user.ToString());
+                    loginModel.role = role;
+                    loginModel.password = encryptionService.MD5Hash(loginModel.password);
+                    context.UserModel.Add(loginModel);
+                    context.SaveChanges();
+                    return true;
+                }
+            } catch(Exception e)
+            {
+                return false;
+            }
         }
     }
 }
